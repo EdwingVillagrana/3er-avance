@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 public class Tablero extends JPanel implements Graphic{
     
     private int numCasillas;
+    //El tablero contiene una lista<Graphic> que son las aspas y el centro.
     private List<Graphic> listaGraficos;
     
     public Tablero(int numCasillas){
