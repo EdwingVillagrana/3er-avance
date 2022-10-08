@@ -58,17 +58,11 @@ public class Aspa implements Graphic {
      */
     @Override
     public void dibujar(Graphics g) {
-        if (tipoAspa.equals("superior")) {
-            aspaSuperior(g);
-        }
-        if (tipoAspa.equals("inferior")) {
-            aspaInferior(g);
-        }
-        if (tipoAspa.equals("izquierda")) {
-            aspaIzquierda(g);
-        }
-        if (tipoAspa.equals("derecha")) {
-            aspaDerecha(g);
+        switch(tipoAspa){
+            case ("superior"): aspaSuperior(g); break;
+            case ("inferior"): aspaInferior(g); break;
+            case ("derecha"): aspaDerecha(g); break;
+            case ("izquierda"): aspaIzquierda(g); break;
         }
     }
 
@@ -81,18 +75,31 @@ public class Aspa implements Graphic {
         listaCasillas = new ArrayList<Graphic>();
 
         /*Ciclo para realizar el dibujo del aspa. Como condicion se 
-          tiene que i debe ser menor al número de casillas - 3 
-          puesto que las últimas 3 casillas son casillas especiales.
+          tiene que i debe ser menor al número de casillas - 1 
+          puesto que la última casilla es redonda.
          */
-        for (int i = 0; i < numCasillas - 3; i++) {
+        for (int i = 0; i < numCasillas - 1; i++) {
             for (int j = 0; j < 2; j++) {
-                listaCasillas.add(new CasillaNormal(x, y));
+                listaCasillas.add(new Casilla(x, y, 2));
                 x -= 50;
             }
             x = 480;
             y -= 50;
         }
-
+        
+        //Creamos las casillas circulares.
+        listaCasillas.add(new Casilla(x-50, y, 0, 90, 4));
+        listaCasillas.add(new Casilla(x-50, y, 90, 90, 4));
+        
+        //Creamos los dibujos de las casillas triangulares a partir de coordenadas.
+        int[] xT = {x, x+50, x+50};
+        int[] yT = {y+101, y+130, y+70};
+        listaCasillas.add(new Casilla(xT, yT, 3));
+        int[] xT2 = {x, x-50, x-50};
+        int[] yT2 = {y+101, y+130, y+70};
+        listaCasillas.add(new Casilla(xT2, yT2, 3));
+        
+        //Imprimimos cada una de las casillas
         for (Graphic casilla : listaCasillas) {
             casilla.dibujar(g);
         }
@@ -107,17 +114,29 @@ public class Aspa implements Graphic {
         listaCasillas = new ArrayList<Graphic>();
 
         /*Ciclo para realizar el dibujo del aspa. Como condicion se 
-          tiene que i debe ser menor al número de casillas - 3 
-          puesto que las últimas 3 casillas son casillas especiales.
+          tiene que i debe ser menor al número de casillas - 1 
+          puesto que la última casilla es redonda.
          */
-        for (int i = 0; i < numCasillas - 3; i++) {
+        for (int i = 0; i < numCasillas - 1; i++) {
             for (int j = 0; j < 2; j++) {
-                listaCasillas.add(new CasillaNormal(x, y));
+                listaCasillas.add(new Casilla(x, y, 2));
                 x -= 50;
             }
             x = 480;
             y += 50;
         }
+        
+        //Creamos las casillas circulares.
+        listaCasillas.add(new Casilla(x-50, y-50, 180, 90, 4));
+        listaCasillas.add(new Casilla(x-50, y-50, 270, 90, 4));
+        
+        //Creamos los dibujos de las casillas triangulares a partir de coordenadas.
+        int[] xT = {x, x+50, x+50};
+        int[] yT = {y-50, y-80, y-20};
+        listaCasillas.add(new Casilla(xT, yT, 3));
+        int[] xT2 = {x, x-50, x-50};
+        int[] yT2 = {y-50, y-80, y-20};
+        listaCasillas.add(new Casilla(xT2, yT2, 3));
 
         for (Graphic casilla : listaCasillas) {
             casilla.dibujar(g);
@@ -133,17 +152,29 @@ public class Aspa implements Graphic {
         listaCasillas = new ArrayList<Graphic>();
 
         /*Ciclo para realizar el dibujo del aspa. Como condicion se 
-          tiene que i debe ser menor al número de casillas - 3 
-          puesto que las últimas 3 casillas son casillas especiales.
+          tiene que i debe ser menor al número de casillas - 1 
+          puesto que la última casilla es redonda.
          */
-        for (int i = 0; i < numCasillas - 3; i++) {
+        for (int i = 0; i < numCasillas - 1; i++) {
             for (int j = 0; j < 2; j++) {
-                listaCasillas.add(new CasillaNormal(x, y));
+                listaCasillas.add(new Casilla(x, y, 2));
                 y -= 50;
             }
             y = 460;
             x -= 50;
         }
+
+        //Creamos las casillas circulares.
+        listaCasillas.add(new Casilla(x, y-50, 90, 180, 4));
+        listaCasillas.add(new Casilla(x, y-50, 180, 90, 4));
+        
+        //Creamos los dibujos de las casillas triangulares a partir de coordenadas.
+        int[] xT = {x+70, x+100, x+130};
+        int[] yT = {y-50, y, y-50};
+        listaCasillas.add(new Casilla(xT, yT, 3));
+        int[] xT2 = {x+70, x+100, x+130};
+        int[] yT2 = {y+50, y, y+50};
+        listaCasillas.add(new Casilla(xT2, yT2, 3));
 
         for (Graphic casilla : listaCasillas) {
             casilla.dibujar(g);
@@ -159,17 +190,29 @@ public class Aspa implements Graphic {
         listaCasillas = new ArrayList<Graphic>();
 
         /*Ciclo para realizar el dibujo del aspa. Como condicion se 
-          tiene que i debe ser menor al número de casillas - 3 
-          puesto que las últimas 3 casillas son casillas especiales.
+          tiene que i debe ser menor al número de casillas - 1 
+          puesto que la última casilla es redonda.
          */
-        for (int i = 0; i < numCasillas - 3; i++) {
+        for (int i = 0; i < numCasillas - 1; i++) {
             for (int j = 0; j < 2; j++) {
-                listaCasillas.add(new CasillaNormal(x, y));
+                listaCasillas.add(new Casilla(x, y, 2));
                 y -= 50;
             }
             y = 460;
             x += 50;
         }
+        
+        //Creamos las casillas circulares.
+        listaCasillas.add(new Casilla(x-50, y-50, 0, 90, 4));
+        listaCasillas.add(new Casilla(x-50, y-50, 270, 90, 4));
+        
+        //Creamos los dibujos de las casillas triangulares a partir de coordenadas.
+        int[] xT = {x-80, x-50, x-20};
+        int[] yT = {y-50, y, y-50};
+        listaCasillas.add(new Casilla(xT, yT, 3));
+        int[] xT2 = {x-80, x-50, x-20};
+        int[] yT2 = {y+50, y, y+50};
+        listaCasillas.add(new Casilla(xT2, yT2, 3));
 
         for (Graphic casilla : listaCasillas) {
             casilla.dibujar(g);

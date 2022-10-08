@@ -34,10 +34,10 @@ public class Centro implements Graphic {
     @Override
     public void dibujar(Graphics g) {
         casillasCentrales = new ArrayList<Graphic>();
-        casillasCentrales.add(new CasillaCentral(430, 460));
-        casillasCentrales.add(new CasillaCentral(430, 410));
-        casillasCentrales.add(new CasillaCentral(480, 460));
-        casillasCentrales.add(new CasillaCentral(480, 410));
+        casillasCentrales.add(new Casilla(430, 460, 1));
+        casillasCentrales.add(new Casilla(430, 410, 1));
+        casillasCentrales.add(new Casilla(480, 460, 1));
+        casillasCentrales.add(new Casilla(480, 410, 1));
 
         for (Graphic casilla : casillasCentrales) {
             casilla.dibujar(g);
