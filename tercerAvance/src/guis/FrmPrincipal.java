@@ -78,7 +78,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
-        // TODO add your handling code here:
+     ConfigurarPartida configurarPartida = new ConfigurarPartida(this, true);
+     configurarPartida.setVisible(true);
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
 
     /**
