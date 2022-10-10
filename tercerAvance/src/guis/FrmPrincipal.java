@@ -5,6 +5,8 @@
 package guis;
 
 import java.awt.BorderLayout;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.border.EmptyBorder;
 
 /**
@@ -19,6 +21,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     public FrmPrincipal() {
         initComponents();
         PanelFondo panelFondo = new PanelFondo();
+       
         this.add(panelFondo, BorderLayout.CENTER);
         this.pack();
     }
@@ -38,11 +41,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Patolli");
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        setPreferredSize(new java.awt.Dimension(850, 800));
         setResizable(false);
 
         btnCrearPartida.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnCrearPartida.setText("Crear partida");
+        btnCrearPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/txtCrearPartida.png"))); // NOI18N
         btnCrearPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearPartidaActionPerformed(evt);
@@ -50,18 +52,23 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setText("Unirse");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/txtUnirse.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(btnCrearPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addContainerGap(168, Short.MAX_VALUE)
+                .addComponent(btnCrearPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(142, 142, 142)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
+                .addGap(161, 161, 161))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,7 +87,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private void btnCrearPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPartidaActionPerformed
      ConfigurarPartida configurarPartida = new ConfigurarPartida(this, true);
      configurarPartida.setVisible(true);
+    
     }//GEN-LAST:event_btnCrearPartidaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
