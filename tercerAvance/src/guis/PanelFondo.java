@@ -18,13 +18,14 @@ public class PanelFondo extends javax.swing.JPanel {
         this.setSize(850, 800);
     }
     
+
     public void paintComponent(Graphics g){
         Dimension tamano = getSize();
-/*        ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/imagenes/piramide.jpg"));
+       ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/imagenes/piramide.jpg"));
         g.drawImage(imagenFondo.getImage(), 0, 0, (int)this.getWidth(), this.getHeight(), null);
         imagenFondo.setImageObserver(this);
         setOpaque(false);
-        */
+        
         super.paintComponent(g);
     }
     
