@@ -8,7 +8,7 @@ package guis;
 import java.awt.BorderLayout;
 
 /**
- *
+ * Esta clase presenta de forma grafica el tablero
  * @author gerar
  */
 public class FrmTablero extends javax.swing.JFrame {
