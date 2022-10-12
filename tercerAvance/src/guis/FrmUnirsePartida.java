@@ -6,7 +6,7 @@
 package guis;
 
 /**
- *
+ * En este frame el usuario se une a una partida
  * @author gerar
  */
 public class FrmUnirsePartida extends javax.swing.JFrame {
