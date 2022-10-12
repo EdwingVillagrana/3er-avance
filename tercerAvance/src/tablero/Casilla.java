@@ -134,4 +134,12 @@ public class Casilla implements Graphic {
         g2.draw(new Arc2D.Double(x, y, 100, 100, anguloInicial, anguloFinal, Arc2D.PIE));
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
 }

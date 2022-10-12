@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  *
  * @author edw_v
  */
-public class Tablero extends JPanel implements Graphic {
+public class Tablero implements Graphic {
 
     private int numCasillas;
     //El tablero contiene una lista<Graphic> que son las aspas y el centro.
@@ -57,18 +57,4 @@ public class Tablero extends JPanel implements Graphic {
             grafico.dibujar(g);
         }
     }
-
-    //MÉTODO PARA REALIZAR PRUEBAS, DEBEMOS ELIMINAR Y CREAR UN NUEVO FRAME PARA QUE SE CREE EL JPANEL DEL TABLERO
-    public static void main(String[] args) {
-        JFrame ventana = new JFrame("Tablero");
-
-        Tablero objeto = new Tablero(7);
-        ventana.add(objeto);
-        ventana.setSize(1900, 1000);
-        ventana.setLocationRelativeTo(null);
-        ventana.setVisible(true);
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventana.setResizable(false);
-    }
-
 }
