@@ -15,17 +15,18 @@ import javax.swing.ImageIcon;
 public class PanelFondo extends javax.swing.JPanel {
 
     public PanelFondo() {
-        this.setSize(850, 800);
+        this.setSize(900, 850);
     }
     
     public void paintComponent(Graphics g){
         Dimension tamano = getSize();
-        ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/imagenes/piramide.jpg"));
-        g.drawImage(imagenFondo.getImage(), 0, 0, (int)this.getWidth(), this.getHeight(), null);
+        ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/imagenes/Piramide-selva-rd.jpeg"));
+        g.drawImage(imagenFondo.getImage(), 0, 0, 900, 750, this);
         imagenFondo.setImageObserver(this);
         setOpaque(false);
         
         super.paintComponent(g);
     }
+    
     
 }
