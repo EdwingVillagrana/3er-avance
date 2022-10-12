@@ -106,7 +106,7 @@ public class Casilla implements Graphic {
      */
     public void casillaCuadrada(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        g2.setStroke(new BasicStroke(5.0f));
+        g2.setStroke(new BasicStroke(2.0f));
         g2.setColor(Color.black);
         g2.drawRect(x, y, 50, 50);
     }
@@ -118,7 +118,7 @@ public class Casilla implements Graphic {
      */
     public void casillaTriangular(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        g2.setColor(new Color(188, 156, 37));
+//        g2.setColor(new Color(188, 156, 37));
         g2.fillPolygon(xT, yT, 3);
         g2.setColor(Color.black);
     }
