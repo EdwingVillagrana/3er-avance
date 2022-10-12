@@ -5,7 +5,7 @@
 package guis;
 
 /**
- *
+ * Esta clase configura la partida 
  * @author edw_v
  */
 public class FrmConfigurarPartida extends javax.swing.JDialog {
